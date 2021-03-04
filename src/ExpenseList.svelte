@@ -1,7 +1,7 @@
 <script>
 import Title from './Title.svelte'
 export let total;
-export let expenses;
+export let expenseData;
 import Expense from './Expense.svelte'
 
 </script>
@@ -9,7 +9,7 @@ import Expense from './Expense.svelte'
 <Title title={'expense list'}/>
 <Title title={`Total Expense: ${total}`}/>
 <ul>
-{#each expenses as expense}
+{#each expenseData as expense}
 <li><Expense {...expense}/></li>
 {/each}
 </ul>
